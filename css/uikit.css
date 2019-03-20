@@ -3,24 +3,6 @@
    Component: Base
  ========================================================================== */
 /*
- * 1. Set `font-size` to support `rem` units
- *    Not using `font` property because a leading hyphen (e.g. -apple-system) causes the font to break in IE11 and Edge
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- * 3. Style
- */
-html {
-  /* 1 */
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.5;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 3 */
-  background: #fff;
-  color: #666;
-}
-/*
  * Remove the margin in all browsers.
  */
 body {
@@ -225,85 +207,6 @@ figure {
 * + fieldset,
 * + figure {
   margin-top: 20px;
-}
-/* Headings
- ========================================================================== */
-h1,
-.uk-h1,
-h2,
-.uk-h2,
-h3,
-.uk-h3,
-h4,
-.uk-h4,
-h5,
-.uk-h5,
-h6,
-.uk-h6 {
-  margin: 0 0 20px 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-weight: normal;
-  color: #333;
-  text-transform: none;
-}
-/* Add margin if adjacent element */
-* + h1,
-* + .uk-h1,
-* + h2,
-* + .uk-h2,
-* + h3,
-* + .uk-h3,
-* + h4,
-* + .uk-h4,
-* + h5,
-* + .uk-h5,
-* + h6,
-* + .uk-h6 {
-  margin-top: 40px;
-}
-/*
- * Sizes
- */
-h1,
-.uk-h1 {
-  font-size: 2.23125rem;
-  line-height: 1.2;
-}
-h2,
-.uk-h2 {
-  font-size: 1.7rem;
-  line-height: 1.3;
-}
-h3,
-.uk-h3 {
-  font-size: 1.5rem;
-  line-height: 1.4;
-}
-h4,
-.uk-h4 {
-  font-size: 1.25rem;
-  line-height: 1.4;
-}
-h5,
-.uk-h5 {
-  font-size: 16px;
-  line-height: 1.4;
-}
-h6,
-.uk-h6 {
-  font-size: 0.875rem;
-  line-height: 1.4;
-}
-/* Tablet landscape and bigger */
-@media (min-width: 960px) {
-  h1,
-  .uk-h1 {
-    font-size: 2.625rem;
-  }
-  h2,
-  .uk-h2 {
-    font-size: 2rem;
-  }
 }
 /* Lists
  ========================================================================== */
