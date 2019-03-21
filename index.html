@@ -15,13 +15,22 @@
             }
             body {
                 /* padding:200px; */
-                background:grey;
+                background:#101329;
+            }
+            .board {
+                padding-top:50px;
+                padding-bottom:100px;
+                padding-left:100px;
+                padding-right:100px;
             }
             .list {
                 background:white;
                 width:300px;
                 min-height:140px;
                 border-radius:10px;
+                margin:10px !important;
+                padding:0;
+                filter:drop-shadow(0px 0px 10px rgba(0,0,0,.5))
             }
             .title {
                 min-height:80px;
@@ -37,9 +46,10 @@
                 flex:4 1 0;
                 padding:15px;
             }
-            .completed {
+            .complete {
                 flex:1 0 auto;
-                background:green;
+                border-radius:0 10px 0 0;
+                /* background:green; */
             }
 
             .list-elem {
@@ -54,26 +64,35 @@
             }
             .elem-complete {
                 flex:1 0 auto;
-                background:green;
+                /* background:green; */
             }
 
             .new {
                 height:60px;
-                background:green;
+                /* background:green; */
+                border:0;
+                border-radius:0 0 10px 10px;
+                width:100%;
+                -webkit-appearance:none;
+                padding-left:8px;
+                padding-right:8px;
+            }
+            button::-moz-focus-inner {
+                border:0 !important;
             }
         </style>
     </head>
     <body>
-        <div class="board" uk-sortable>
+        <div class="board" uk-grid="masonry: true" uk-sortable>
             <div class="list">
                 <div class="title">
                     <div class="details">
                         <h1>To-Do</h1>
                         <p>Created: 20/03/2019</p>
                     </div>
-                    <div class="completed">&nbsp;</div>
+                    <div class="complete">&nbsp;</div>
                 </div>
-                <div class="list-elems" uk-sortable>
+                <div class="list-elems">
                     <div class="list-elem">
                         <div class="elem-name">Item 1</div>
                         <div class="elem-complete">&nbsp;</div>
@@ -91,14 +110,236 @@
                         <h1>To-Do</h1>
                         <p>Created: 20/03/2019</p>
                     </div>
-                    <div class="completed">&nbsp;</div>
+                    <div class="complete">&nbsp;</div>
+                </div>
+                <div class="list-elem">
+                    <div class="elem-name">Item 1</div>
+                    <div class="elem-complete">&nbsp;</div>
+                </div>
+                <button class="new">+ NEW ITEM</button>
+            </div>
+            <div class="list">
+                <div class="title">
+                    <div class="details">
+                        <h1>To-Do</h1>
+                        <p>Created: 20/03/2019</p>
+                    </div>
+                    <div class="complete">&nbsp;</div>
                 </div>
                 <div class="list-elem">
                     <div class="elem-name">Item 1</div>
                     <div class="elem-complete">&nbsp;</div>
                 </div>
                 <div class="list-elem">
-                    <div class="elem-name">Item 2 has lots of text and may potentially spill into other lines because it needs space to expand so that stuff isn't cut off too much</div>
+                    <div class="elem-name">Item 2 has a bit of text</div>
+                    <div class="elem-complete">&nbsp;</div>
+                </div>
+                <button class="new">+ NEW ITEM</button>
+            </div>
+            <div class="list">
+                <div class="title">
+                    <div class="details">
+                        <h1>To-Do</h1>
+                        <p>Created: 20/03/2019</p>
+                    </div>
+                    <div class="complete">&nbsp;</div>
+                </div>
+                <div class="list-elems">
+                    <div class="list-elem">
+                        <div class="elem-name">Item 1</div>
+                        <div class="elem-complete">&nbsp;</div>
+                    </div>
+                    <div class="list-elem">
+                        <div class="elem-name">Item 2 has lots of text and may potentially spill into other lines because it needs space to expand so that stuff isn't cut off too much</div>
+                        <div class="elem-complete">&nbsp;</div>
+                    </div>
+                </div>
+                <button class="new">+ NEW ITEM</button>
+            </div>
+            <div class="list">
+                <div class="title">
+                    <div class="details">
+                        <h1>To-Do</h1>
+                        <p>Created: 20/03/2019</p>
+                    </div>
+                    <div class="complete">&nbsp;</div>
+                </div>
+                <div class="list-elem">
+                    <div class="elem-name">Item 1</div>
+                    <div class="elem-complete">&nbsp;</div>
+                </div>
+                <button class="new">+ NEW ITEM</button>
+            </div>
+            <div class="list">
+                <div class="title">
+                    <div class="details">
+                        <h1>To-Do</h1>
+                        <p>Created: 20/03/2019</p>
+                    </div>
+                    <div class="complete">&nbsp;</div>
+                </div>
+                <div class="list-elem">
+                    <div class="elem-name">Item 1</div>
+                    <div class="elem-complete">&nbsp;</div>
+                </div>
+                <div class="list-elem">
+                    <div class="elem-name">Item 2 has a bit of text</div>
+                    <div class="elem-complete">&nbsp;</div>
+                </div>
+                <button class="new">+ NEW ITEM</button>
+            </div>
+            <div class="list">
+                <div class="title">
+                    <div class="details">
+                        <h1>To-Do</h1>
+                        <p>Created: 20/03/2019</p>
+                    </div>
+                    <div class="complete">&nbsp;</div>
+                </div>
+                <div class="list-elems">
+                    <div class="list-elem">
+                        <div class="elem-name">Item 1</div>
+                        <div class="elem-complete">&nbsp;</div>
+                    </div>
+                    <div class="list-elem">
+                        <div class="elem-name">Item 2 has lots of text and may potentially spill into other lines because it needs space to expand so that stuff isn't cut off too much</div>
+                        <div class="elem-complete">&nbsp;</div>
+                    </div>
+                </div>
+                <button class="new">+ NEW ITEM</button>
+            </div>
+            <div class="list">
+                <div class="title">
+                    <div class="details">
+                        <h1>To-Do</h1>
+                        <p>Created: 20/03/2019</p>
+                    </div>
+                    <div class="complete">&nbsp;</div>
+                </div>
+                <div class="list-elem">
+                    <div class="elem-name">Item 1</div>
+                    <div class="elem-complete">&nbsp;</div>
+                </div>
+                <button class="new">+ NEW ITEM</button>
+            </div>
+            <div class="list">
+                <div class="title">
+                    <div class="details">
+                        <h1>To-Do</h1>
+                        <p>Created: 20/03/2019</p>
+                    </div>
+                    <div class="complete">&nbsp;</div>
+                </div>
+                <div class="list-elem">
+                    <div class="elem-name">Item 1</div>
+                    <div class="elem-complete">&nbsp;</div>
+                </div>
+                <div class="list-elem">
+                    <div class="elem-name">Item 2 has a bit of text</div>
+                    <div class="elem-complete">&nbsp;</div>
+                </div>
+                <button class="new">+ NEW ITEM</button>
+            </div>
+            <div class="list">
+                <div class="title">
+                    <div class="details">
+                        <h1>To-Do</h1>
+                        <p>Created: 20/03/2019</p>
+                    </div>
+                    <div class="complete">&nbsp;</div>
+                </div>
+                <div class="list-elems">
+                    <div class="list-elem">
+                        <div class="elem-name">Item 1</div>
+                        <div class="elem-complete">&nbsp;</div>
+                    </div>
+                    <div class="list-elem">
+                        <div class="elem-name">Item 2 has lots of text and may potentially spill into other lines because it needs space to expand so that stuff isn't cut off too much</div>
+                        <div class="elem-complete">&nbsp;</div>
+                    </div>
+                </div>
+                <button class="new">+ NEW ITEM</button>
+            </div>
+            <div class="list">
+                <div class="title">
+                    <div class="details">
+                        <h1>To-Do</h1>
+                        <p>Created: 20/03/2019</p>
+                    </div>
+                    <div class="complete">&nbsp;</div>
+                </div>
+                <div class="list-elem">
+                    <div class="elem-name">Item 1</div>
+                    <div class="elem-complete">&nbsp;</div>
+                </div>
+                <button class="new">+ NEW ITEM</button>
+            </div>
+            <div class="list">
+                <div class="title">
+                    <div class="details">
+                        <h1>To-Do</h1>
+                        <p>Created: 20/03/2019</p>
+                    </div>
+                    <div class="complete">&nbsp;</div>
+                </div>
+                <div class="list-elem">
+                    <div class="elem-name">Item 1</div>
+                    <div class="elem-complete">&nbsp;</div>
+                </div>
+                <div class="list-elem">
+                    <div class="elem-name">Item 2 has a bit of text</div>
+                    <div class="elem-complete">&nbsp;</div>
+                </div>
+                <button class="new">+ NEW ITEM</button>
+            </div>
+            <div class="list">
+                <div class="title">
+                    <div class="details">
+                        <h1>To-Do</h1>
+                        <p>Created: 20/03/2019</p>
+                    </div>
+                    <div class="complete">&nbsp;</div>
+                </div>
+                <div class="list-elems">
+                    <div class="list-elem">
+                        <div class="elem-name">Item 1</div>
+                        <div class="elem-complete">&nbsp;</div>
+                    </div>
+                    <div class="list-elem">
+                        <div class="elem-name">Item 2 has lots of text and may potentially spill into other lines because it needs space to expand so that stuff isn't cut off too much</div>
+                        <div class="elem-complete">&nbsp;</div>
+                    </div>
+                </div>
+                <button class="new">+ NEW ITEM</button>
+            </div>
+            <div class="list">
+                <div class="title">
+                    <div class="details">
+                        <h1>To-Do</h1>
+                        <p>Created: 20/03/2019</p>
+                    </div>
+                    <div class="complete">&nbsp;</div>
+                </div>
+                <div class="list-elem">
+                    <div class="elem-name">Item 1</div>
+                    <div class="elem-complete">&nbsp;</div>
+                </div>
+                <button class="new">+ NEW ITEM</button>
+            </div>
+            <div class="list">
+                <div class="title">
+                    <div class="details">
+                        <h1>To-Do</h1>
+                        <p>Created: 20/03/2019</p>
+                    </div>
+                    <div class="complete">&nbsp;</div>
+                </div>
+                <div class="list-elem">
+                    <div class="elem-name">Item 1</div>
+                    <div class="elem-complete">&nbsp;</div>
+                </div>
+                <div class="list-elem">
+                    <div class="elem-name">Item 2 has a bit of text</div>
                     <div class="elem-complete">&nbsp;</div>
                 </div>
                 <button class="new">+ NEW ITEM</button>
